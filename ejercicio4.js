@@ -11,12 +11,7 @@ const mainCharacters = [
 ];
 
 function findArrayIndex(array, text) {
-  const position = array.indexOf(text);
-  if (position === -1) {
-    console.log("El texto no se encuentra en el array");
-  } else {
-    console.log(position);
-  }
+  return array.indexOf(text);
 }
 
 function removeItem(array, text) {
@@ -24,11 +19,12 @@ function removeItem(array, text) {
   if (index !== -1) {
     array.splice(index, 1);
   }
-  
+
   return array;
 }
 
-findArrayIndex(mainCharacters, "Rey");
-findArrayIndex(mainCharacters, "Yoda");
-removeItem(mainCharacters, "Rey");
-removeItem(mainCharacters, "Yoda");
+console.log(findArrayIndex(mainCharacters, "Rey"));
+console.log(findArrayIndex(mainCharacters, "Yoda"));
+console.log(removeItem(mainCharacters, "Rey"));
+console.log(removeItem(mainCharacters, "Luke"));
+console.log(removeItem(mainCharacters, "Yoda"));
